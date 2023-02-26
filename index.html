@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note app</title>
+    <!-- /css link / -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--popup box-->
+
+    <div class="popup-box">
+        <div class="popup">
+            <div class="content">
+                <header>
+                   <div class="flex">
+                    <span class="closebtn">X</span>
+                    <p>Add a new Note</p> 
+                   </div>
+
+                   <button>Add note</button>
+                </header>
+
+                <form action="#">
+                    <div class="row title">
+                        <label>Title</label>
+                        <input type="text">
+                    </div>
+                    <div class="row description">
+                        <label>description</label>
+                        <textarea></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <h1 class="header">notes</h1>
+        <div class="search-bar">
+            <input type="search" placeholder="search notes" class="search-box">
+        </div>
+
+        <!-- /where the notes appear to/ -->
+
+       <div class="addbtn">
+            <span>+</span>
+       </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

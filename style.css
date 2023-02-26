@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background-color: #111111;
+}
+
+.wrapper {
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.wrapper .header {
+    color: #cccc;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.search-bar{
+    margin-bottom: 25px;
+}
+
+.search-box {
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    background-color: #222222;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: #cccc;
+    font-weight: lighter;
+    border-radius: 20px;
+}
+
+.searchbar::placeholder {
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.notes-box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.notes-box .note {
+    background-color: #222222;
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
+.note {
+    margin-bottom: 20px;
+}
+
+.note .details p {
+    color: #cccc;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 25px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.note .details span {
+    color: #cccc;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.bottom-content {
+    margin-top: 20px;
+    border-top: 1px solid #cccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom-content .date {
+    color: #6d6d6d;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.bottom-content .settings p{
+    color: #6d6d6d;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.settings {
+    position: relative;
+}
+
+.settings .menu{
+    position: absolute;
+    top: 0;
+    background-color: #6d6d6d;
+    padding: 10px 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    transform: scale(0);
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+    transform-origin: bottom right;
+}
+
+.settings .menu li {
+    font-family: sans-serif;
+    padding: 3px 0px;
+    cursor: pointer;
+    font-weight: 100;
+}
+
+.settings .menu li:first-child{
+    border-bottom: 1px solid #222222;
+}
+
+.settings.show .menu {
+    transform: scale(1);
+}
+
+.popup-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background-color: #111111;
+}
+
+.popup-box .popup {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    z-index: 3;
+    max-width: 400px;
+    margin-top: 8%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.popup .content{
+    width: calc(100% - 15px);
+    background-color: #111111;
+    border-radius: 5px;
+    padding: 15px 20px;
+}
+
+.popup .content header, .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popup .content header, .flex{
+    color: #cccc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.popup .content header .flex span{
+    margin-right: 20px;
+    font-size: 30px;
+    color: #cccc;
+}
+
+.content header p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.content header span{
+    color: #fff;
+    cursor: pointer;
+    font-size: 23px;
+    font-family: sans-serif;
+}
+
+.content form{
+    margin: 15px 25px 35px;
+}
+
+.content form .row {
+    margin-bottom: 20px;
+}
+
+form .row label{
+    display: block;
+    font-size: 18px;
+    margin-bottom:6px ;
+    color: #cccc;
+    font-family: sans-serif;
+}
+
+.content form :where(input, textarea){
+    width: 100%;
+    border-radius: 4px;
+    border: none;
+    border-bottom: 1px solid #999;
+    background: transparent;
+    padding: 0 15px ;
+    color: #cccc;
+    font-size: 17px;
+    height: 50px;
+    outline: none;
+}
+
+.content form textarea{
+    height: 50px;
+    resize: none;
+    padding: 8px 15px;
+} 
+
+.content header button{
+    height: 40px;
+    background-color: #6a93f8;
+    padding: 0px 10px;
+    outline: none;
+    font-size: 17px;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.popup-box, .popup-box .popup{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup-box.show, .popup-box.show .popup{
+   opacity: 1;
+   pointer-events: auto;
+}
+
+.wrapper .addbtn {
+    position: fixed;
+    bottom: 0;
+    left: 45%;
+    background-color: #6a93f8;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.wrapper .addbtn span {
+    height: 78px;
+    width: 78px;
+    font-size: 50px;
+    color: #fff;
+    padding: 15px;
+}
