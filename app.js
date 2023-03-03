@@ -9,6 +9,8 @@ const  months = ["january", "february", "March", "April",   "May", "June", "july
 
 const notes = JSON.parse(localStorage.getItem("notes") || "[]");
 
+let isUpdate = false, updateId
+
 addBtn.addEventListener("click", ()=>{
     popup.classList.add("show");
 });
@@ -113,9 +115,9 @@ addNote.addEventListener("click", ()=>{
 
         if(!isUpdate){
             notes.push(noteData);
-        }else {
+        }else{
             isUpdate = false;
-            notes[updateId] = noteData;
+            notes[updateId] = noteData // updating specified note
         }
         //saving note to local storage
         localStorage.setItem("notes", JSON.stringify(notes));
